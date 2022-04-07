@@ -10,6 +10,6 @@ opt_in_rules:
 - empty_count
 - empty_string
 excluded:
-- Pods
+- Pods/
 - Instagram-Clone/AppDelegate.swift
 - Instagram-Clone/SceneDelegate.swift

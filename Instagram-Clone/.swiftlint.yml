@@ -6,10 +6,12 @@ disabled_rules:
 - function_body_length
 - cyclomatic_complexity
 - file_length
+
 opt_in_rules:
 - empty_count
 - empty_string
+
 excluded:
 - Pods/
-- Instagram-Clone/AppDelegate.swift
-- Instagram-Clone/SceneDelegate.swift
+- Instagram-Clone/Application/Supports/AppDelegate.swift
+- Instagram-Clone/Application/Supports/SceneDelegate.swift

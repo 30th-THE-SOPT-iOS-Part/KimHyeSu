@@ -3,13 +3,16 @@ name: SwiftLint
 on:
   push:
     branches: [ main ]
+    paths:
+      - '.github/workflows/swiftlint.yml'
+      - '.swiftlint.yml'
+      - '**/*.swift'
+      - '!**/Pods/'
   pull_request:
     paths:
       - '.github/workflows/swiftlint.yml'
       - '.swiftlint.yml'
       - '**/*.swift'
-    paths-ignore:
-      - '**/Pods/'
 
 jobs:
   SwiftLint:

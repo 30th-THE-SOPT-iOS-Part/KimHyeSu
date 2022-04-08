@@ -7,9 +7,12 @@
 
 import UIKit
 
-class SignupNameViewController: UIViewController {
+final class SignupNameViewController: BaseViewController {
 
+    // MARK: - LifeCycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
 }

@@ -8,6 +8,7 @@ on:
       - '.github/workflows/swiftlint.yml'
       - '.swiftlint.yml'
       - '**/*.swift'
+      - '!Instagram-Clone/Pods/'
 
 jobs:
   SwiftLint:

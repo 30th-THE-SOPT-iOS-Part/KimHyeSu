@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Fdo-2a-e8b">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
@@ -61,7 +61,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZNw-41-L2D" customClass="InstagramBlueButton" customModule="Instagram_Clone" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZNw-41-L2D" customClass="InstagramBlueButton" customModule="Instagram_Clone" customModuleProvider="target">
                                 <rect key="frame" x="20" y="265" width="374" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="KNq-zY-hOZ"/>
@@ -95,6 +95,7 @@
                     </view>
                     <connections>
                         <outlet property="nameTextField" destination="K99-RT-lVK" id="vee-PN-0EC"/>
+                        <outlet property="nextButton" destination="ZNw-41-L2D" id="5aV-N5-W77"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -146,7 +147,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="사용자 이름" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ztu-Nu-c2j" customClass="InstagramTextField" customModule="Instagram_Clone" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ztu-Nu-c2j" customClass="InstagramTextField" customModule="Instagram_Clone" customModuleProvider="target">
                                 <rect key="frame" x="20" y="200" width="374" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="Deb-iQ-vp0"/>
@@ -154,7 +155,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLR-eF-vIa" customClass="InstagramBlueButton" customModule="Instagram_Clone" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLR-eF-vIa" customClass="InstagramBlueButton" customModule="Instagram_Clone" customModuleProvider="target">
                                 <rect key="frame" x="20" y="265" width="374" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="tdc-vR-mwm"/>
@@ -185,6 +186,10 @@
                             <constraint firstItem="ztu-Nu-c2j" firstAttribute="top" secondItem="aWZ-if-u7y" secondAttribute="bottom" constant="30" id="oxh-Re-b2a"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nextButton" destination="eLR-eF-vIa" id="dbk-Kw-nTn"/>
+                        <outlet property="passwordTextField" destination="ztu-Nu-c2j" id="SWx-TE-6eu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="li5-mV-Lv4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

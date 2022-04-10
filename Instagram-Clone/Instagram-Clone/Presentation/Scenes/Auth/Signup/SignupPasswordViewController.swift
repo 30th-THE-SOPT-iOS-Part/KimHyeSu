@@ -13,10 +13,16 @@ final class SignupPasswordViewController: UIViewController {
     
     var name: String?
     
+    // MARK: - IBOutlet
+    
+    @IBOutlet weak var passwordTextField: InstagramTextField!
+    @IBOutlet weak var nextButton: InstagramBlueButton!
+    
     // MARK: - LifeCycle
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setTextFieldAction()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -28,6 +34,19 @@ final class SignupPasswordViewController: UIViewController {
     
     private func popToSigninViewController() {
         self.navigationController?.popToRootViewController(animated: true)
+    }
+    
+    private func setTextFieldAction() {
+        passwordTextField.addAction(UIAction(handler: self.hasTextHandler),
+                                    for: .editingChanged)
+    }
+    
+    private func isConfirmedSignupPasswordData() -> Bool {
+        return passwordTextField.hasText
+    }
+    
+    private func hasTextHandler(_ action: UIAction) {
+        nextButton.isEnabled = isConfirmedSignupPasswordData()
     }
     
     // MARK: - IBAction

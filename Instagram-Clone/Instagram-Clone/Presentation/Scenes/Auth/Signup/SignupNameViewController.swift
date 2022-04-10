@@ -10,13 +10,30 @@ import UIKit
 final class SignupNameViewController: BaseViewController {
     
     // MARK: - IBOutlet
-
+    
     @IBOutlet weak var nameTextField: InstagramTextField!
+    @IBOutlet weak var nextButton: InstagramBlueButton!
     
     // MARK: - LifeCycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setTextFieldAction()
+    }
+    
+    // MARK: - Function
+    
+    private func setTextFieldAction() {
+        nameTextField.addAction(UIAction(handler: self.hasTextHandler),
+                                for: .editingChanged)
+    }
+    
+    private func isConfirmedSignupNameData() -> Bool {
+        return nameTextField.hasText
+    }
+    
+    private func hasTextHandler(_ action: UIAction) {
+        nextButton.isEnabled = isConfirmedSignupNameData()
     }
     
     // MARK: - IBAction

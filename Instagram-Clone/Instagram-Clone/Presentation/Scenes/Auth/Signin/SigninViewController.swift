@@ -13,11 +13,13 @@ final class SigninViewController: BaseViewController {
 
     @IBOutlet weak var nameTextField: InstagramTextField!
     @IBOutlet weak var passwordTextField: InstagramTextField!
+    @IBOutlet weak var signinButton: InstagramBlueButton!
     
     // MARK: - LifeCycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setTextFieldAction()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -31,6 +33,21 @@ final class SigninViewController: BaseViewController {
         [nameTextField, passwordTextField].forEach {
             $0?.text?.removeAll()
         }
+    }
+    
+    private func setTextFieldAction() {
+        [nameTextField, passwordTextField].forEach {
+            $0.addAction(UIAction(handler: self.hasTextHandler),
+                         for: .editingChanged)
+        }
+    }
+    
+    private func isConfirmedSigninData() -> Bool {
+        return nameTextField.hasText && passwordTextField.hasText
+    }
+    
+    private func hasTextHandler(_ action: UIAction) {
+        signinButton.isEnabled = isConfirmedSigninData()
     }
     
     // MARK: - IBAction

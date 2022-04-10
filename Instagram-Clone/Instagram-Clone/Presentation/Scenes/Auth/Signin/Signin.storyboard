@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aqj-Cm-Bcs" customClass="InstagramBlueButton" customModule="Instagram_Clone" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aqj-Cm-Bcs" customClass="InstagramBlueButton" customModule="Instagram_Clone" customModuleProvider="target">
                                 <rect key="frame" x="20" y="528" width="374" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="QhQ-5V-gfj"/>
@@ -96,6 +96,7 @@
                     <connections>
                         <outlet property="nameTextField" destination="3j9-zf-Yv8" id="61I-oy-NKJ"/>
                         <outlet property="passwordTextField" destination="bli-Uf-GHE" id="1Q7-Gw-Vp8"/>
+                        <outlet property="signinButton" destination="Aqj-Cm-Bcs" id="vLK-g9-dBc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

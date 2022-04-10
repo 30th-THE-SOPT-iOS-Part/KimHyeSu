@@ -23,6 +23,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="로그인"/>
+                                <connections>
+                                    <action selector="signinButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="SXv-w9-IZh"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgLogo" translatesAutoresizingMaskIntoConstraints="NO" id="I9g-Jb-fg5">
                                 <rect key="frame" x="76" y="258" width="262.5" height="75"/>
@@ -62,6 +65,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="가입하기">
                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="14"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="signupButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="OA9-Cn-yFx"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>

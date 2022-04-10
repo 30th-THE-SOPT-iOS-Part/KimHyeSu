@@ -7,12 +7,17 @@
 
 import UIKit
 
-class AuthCompleteViewController: UIViewController {
+final class AuthCompleteViewController: UIViewController {
+    
+    // MARK: - LifeCycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
+    
+    // MARK: - IBAction
 
+    @IBAction func doneButtonDidTap(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
 }

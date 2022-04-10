@@ -12,7 +12,11 @@ final class SigninViewController: BaseViewController {
     // MARK: - IBOutlet
 
     @IBOutlet weak var nameTextField: InstagramTextField!
-    @IBOutlet weak var passwordTextField: InstagramTextField!
+    @IBOutlet weak var passwordTextField: InstagramTextField! {
+        didSet {
+            passwordTextField.setPasswordTextFieldUI()
+        }
+    }
     @IBOutlet weak var signinButton: InstagramBlueButton!
     
     // MARK: - LifeCycle

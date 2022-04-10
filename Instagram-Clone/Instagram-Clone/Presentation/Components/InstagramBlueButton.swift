@@ -26,6 +26,5 @@ final class InstagramBlueButton: UIButton {
         self.backgroundColor = .systemBlue
         self.tintColor = .white
         self.layer.cornerRadius = 8
-        self.titleLabel?.font = .systemFont(ofSize: 14, weight: .semibold)
     }
 }

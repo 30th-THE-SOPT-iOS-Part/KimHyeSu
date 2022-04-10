@@ -12,5 +12,7 @@ extension Const {
     struct Image {
         
         static let imgLogo = UIImage(named: "imgLogo")!
+        static let passwordHiddenEyeIcon = UIImage(named: "password hidden eye icon")!
+        static let passwordShownEyeIcon = UIImage(named: "password shown eye icon")!
     }
 }

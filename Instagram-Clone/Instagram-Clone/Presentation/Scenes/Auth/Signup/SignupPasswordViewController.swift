@@ -15,7 +15,11 @@ final class SignupPasswordViewController: UIViewController {
     
     // MARK: - IBOutlet
     
-    @IBOutlet weak var passwordTextField: InstagramTextField!
+    @IBOutlet weak var passwordTextField: InstagramTextField! {
+        didSet {
+            passwordTextField.setPasswordTextFieldUI()
+        }
+    }
     @IBOutlet weak var nextButton: InstagramBlueButton!
     
     // MARK: - LifeCycle

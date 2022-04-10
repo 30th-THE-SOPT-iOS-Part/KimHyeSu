@@ -93,6 +93,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="D69-tr-pbC"/>
+                    <connections>
+                        <outlet property="nameTextField" destination="3j9-zf-Yv8" id="61I-oy-NKJ"/>
+                        <outlet property="passwordTextField" destination="bli-Uf-GHE" id="1Q7-Gw-Vp8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

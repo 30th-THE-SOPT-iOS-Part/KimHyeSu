@@ -55,6 +55,9 @@
                             <constraint firstItem="rg8-5b-w7D" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="pOU-lA-RED"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="welcomeMessageLabel" destination="rg8-5b-w7D" id="R1S-ik-mRA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

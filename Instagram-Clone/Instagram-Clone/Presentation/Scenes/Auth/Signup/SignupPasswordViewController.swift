@@ -9,6 +9,10 @@ import UIKit
 
 final class SignupPasswordViewController: UIViewController {
     
+    // MARK: - Property
+    
+    var name: String?
+    
     // MARK: - LifeCycle
 
     override func viewDidLoad() {
@@ -36,6 +40,7 @@ final class SignupPasswordViewController: UIViewController {
         guard let authCompleteViewController = UIStoryboard(name: Const.Storyboard.AuthComplete, bundle: nil)
                 .instantiateViewController(withIdentifier: Const.ViewController.AuthCompleteViewController) as? AuthCompleteViewController else { return }
         authCompleteViewController.modalPresentationStyle = .fullScreen
+        authCompleteViewController.name = name ?? ""
         self.present(authCompleteViewController, animated: true, completion: nil)
     }
 }

@@ -93,6 +93,9 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ZfC-0E-G67" secondAttribute="trailing" constant="40" id="zYb-uO-xdI"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="K99-RT-lVK" id="vee-PN-0EC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -8,15 +8,15 @@
 import UIKit
 
 final class SignupNameViewController: BaseViewController {
+    
+    // MARK: - IBOutlet
 
+    @IBOutlet weak var nameTextField: InstagramTextField!
+    
     // MARK: - LifeCycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
     }
     
     // MARK: - IBAction
@@ -28,6 +28,7 @@ final class SignupNameViewController: BaseViewController {
     @IBAction func nextButtonDidTap(_ sender: Any) {
         guard let signupPasswordViewController = UIStoryboard(name: Const.Storyboard.Signup, bundle: nil)
                 .instantiateViewController(withIdentifier: Const.ViewController.SignupPasswordViewController) as? SignupPasswordViewController else { return }
+        signupPasswordViewController.name = nameTextField.text
         self.navigationController?.pushViewController(signupPasswordViewController, animated: true)
     }
 }

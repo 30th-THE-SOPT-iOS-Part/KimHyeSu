@@ -19,7 +19,7 @@ extension AuthProtocol {
         }
     }
     
-    func hasTextHandler(_ action: UIAction) {
+    private func hasTextHandler(_ action: UIAction) {
         checkButtonEnable()
     }
     

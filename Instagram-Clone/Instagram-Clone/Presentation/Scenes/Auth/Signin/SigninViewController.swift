@@ -37,6 +37,7 @@ final class SigninViewController: BaseViewController {
         [nameTextField, passwordTextField].forEach {
             $0?.text?.removeAll()
         }
+        updateButtonState()
     }
     
     private func setTextFieldAction() {
@@ -51,7 +52,12 @@ final class SigninViewController: BaseViewController {
     }
     
     private func hasTextHandler(_ action: UIAction) {
+        updateButtonState()
+    }
+    
+    private func updateButtonState() {
         signinButton.isEnabled = isConfirmedSigninData()
+        signinButton.setBackgroundColor()
     }
     
     // MARK: - IBAction

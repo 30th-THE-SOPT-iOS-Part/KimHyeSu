@@ -50,7 +50,12 @@ final class SignupPasswordViewController: UIViewController {
     }
     
     private func hasTextHandler(_ action: UIAction) {
+        updateButtonState()
+    }
+    
+    private func updateButtonState() {
         nextButton.isEnabled = isConfirmedSignupPasswordData()
+        nextButton.setBackgroundColor()
     }
     
     // MARK: - IBAction

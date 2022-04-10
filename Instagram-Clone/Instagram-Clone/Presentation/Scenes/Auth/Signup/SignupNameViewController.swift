@@ -33,7 +33,12 @@ final class SignupNameViewController: BaseViewController {
     }
     
     private func hasTextHandler(_ action: UIAction) {
+        updateButtonState()
+    }
+    
+    private func updateButtonState() {
         nextButton.isEnabled = isConfirmedSignupNameData()
+        nextButton.setBackgroundColor()
     }
     
     // MARK: - IBAction

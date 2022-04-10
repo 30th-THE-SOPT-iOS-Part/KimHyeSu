@@ -23,8 +23,23 @@ final class InstagramBlueButton: UIButton {
     }
     
     private func setUI() {
-        self.backgroundColor = .systemBlue
-        self.tintColor = .white
+        setTitleUI()
+        setBackgroundUI()
+    }
+    
+    private func setTitleUI() {
+        let attributes: [NSAttributedString.Key: Any] = [.font: UIFont.systemFont(ofSize: 14, weight: .bold),
+                                                         .foregroundColor: UIColor.white]
+        self.setAttributedTitle(NSAttributedString(string: self.titleLabel?.text ?? "", attributes: attributes),
+                                for: .normal)
+    }
+    
+    private func setBackgroundUI() {
         self.layer.cornerRadius = 8
+        setBackgroundColor()
+    }
+    
+    func setBackgroundColor() {
+        self.backgroundColor = self.isEnabled ? .systemBlue : .systemGray4
     }
 }

@@ -7,7 +7,12 @@
 
 import UIKit
 
-final class SigninViewController: BaseViewController {
+final class SigninViewController: BaseViewController, AuthProtocol {
+    
+    // MARK: - Property
+    
+    lazy var enabledCheckButton: UIButton = signinButton
+    lazy var enabledCheckTextFields: [UITextField] = [nameTextField, passwordTextField]
     
     // MARK: - IBOutlet
 
@@ -23,41 +28,22 @@ final class SigninViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setTextFieldAction()
+        setButtonState()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        clearTextField()
+        clearTextField(enabledCheckTextFields)
     }
     
     // MARK: - Function
     
-    private func clearTextField() {
-        [nameTextField, passwordTextField].forEach {
-            $0?.text?.removeAll()
+    private func clearTextField(_ textfields: [UITextField]) {
+        textfields.forEach {
+            $0.text?.removeAll()
         }
-        updateButtonState()
-    }
-    
-    private func setTextFieldAction() {
-        [nameTextField, passwordTextField].forEach {
-            $0.addAction(UIAction(handler: self.hasTextHandler),
-                         for: .editingChanged)
-        }
-    }
-    
-    private func isConfirmedSigninData() -> Bool {
-        return nameTextField.hasText && passwordTextField.hasText
-    }
-    
-    private func hasTextHandler(_ action: UIAction) {
-        updateButtonState()
-    }
-    
-    private func updateButtonState() {
-        signinButton.isEnabled = isConfirmedSigninData()
-        signinButton.setBackgroundColor()
+        passwordTextField.isSecureTextEntry = true
+        checkButtonEnable()
     }
     
     // MARK: - IBAction

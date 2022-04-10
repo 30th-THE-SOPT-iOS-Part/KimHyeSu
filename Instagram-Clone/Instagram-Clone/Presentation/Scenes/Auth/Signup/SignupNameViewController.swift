@@ -7,7 +7,12 @@
 
 import UIKit
 
-final class SignupNameViewController: BaseViewController {
+final class SignupNameViewController: BaseViewController, AuthProtocol {
+    
+    // MARK: - Property
+    
+    lazy var enabledCheckButton: UIButton = nextButton
+    lazy var enabledCheckTextFields: [UITextField] = [nameTextField]
     
     // MARK: - IBOutlet
     
@@ -18,27 +23,7 @@ final class SignupNameViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setTextFieldAction()
-    }
-    
-    // MARK: - Function
-    
-    private func setTextFieldAction() {
-        nameTextField.addAction(UIAction(handler: self.hasTextHandler),
-                                for: .editingChanged)
-    }
-    
-    private func isConfirmedSignupNameData() -> Bool {
-        return nameTextField.hasText
-    }
-    
-    private func hasTextHandler(_ action: UIAction) {
-        updateButtonState()
-    }
-    
-    private func updateButtonState() {
-        nextButton.isEnabled = isConfirmedSignupNameData()
-        nextButton.setBackgroundColor()
+        setButtonState()
     }
     
     // MARK: - IBAction

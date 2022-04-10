@@ -7,11 +7,13 @@
 
 import UIKit
 
-final class SignupPasswordViewController: UIViewController {
+final class SignupPasswordViewController: BaseViewController, AuthProtocol {
     
     // MARK: - Property
     
     var name: String?
+    lazy var enabledCheckButton: UIButton = nextButton
+    lazy var enabledCheckTextFields: [UITextField] = [passwordTextField]
     
     // MARK: - IBOutlet
     
@@ -26,7 +28,7 @@ final class SignupPasswordViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setTextFieldAction()
+        setButtonState()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -38,24 +40,6 @@ final class SignupPasswordViewController: UIViewController {
     
     private func popToSigninViewController() {
         self.navigationController?.popToRootViewController(animated: true)
-    }
-    
-    private func setTextFieldAction() {
-        passwordTextField.addAction(UIAction(handler: self.hasTextHandler),
-                                    for: .editingChanged)
-    }
-    
-    private func isConfirmedSignupPasswordData() -> Bool {
-        return passwordTextField.hasText
-    }
-    
-    private func hasTextHandler(_ action: UIAction) {
-        updateButtonState()
-    }
-    
-    private func updateButtonState() {
-        nextButton.isEnabled = isConfirmedSignupPasswordData()
-        nextButton.setBackgroundColor()
     }
     
     // MARK: - IBAction

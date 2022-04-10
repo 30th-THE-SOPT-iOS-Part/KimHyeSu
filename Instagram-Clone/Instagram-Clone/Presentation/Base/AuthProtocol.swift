@@ -10,6 +10,8 @@ import UIKit
 protocol AuthProtocol {
     var enabledCheckButton: UIButton { get }
     var enabledCheckTextFields: [UITextField] { get }
+    
+    func setTextFieldType() 
 }
 
 extension AuthProtocol {

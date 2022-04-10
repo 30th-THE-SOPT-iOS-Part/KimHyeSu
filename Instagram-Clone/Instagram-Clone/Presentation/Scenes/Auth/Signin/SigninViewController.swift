@@ -17,11 +17,7 @@ final class SigninViewController: BaseViewController, AuthProtocol {
     // MARK: - IBOutlet
 
     @IBOutlet weak var nameTextField: InstagramTextField!
-    @IBOutlet weak var passwordTextField: InstagramTextField! {
-        didSet {
-            passwordTextField.setPasswordTextFieldUI()
-        }
-    }
+    @IBOutlet weak var passwordTextField: InstagramTextField!
     @IBOutlet weak var signinButton: InstagramBlueButton!
     
     // MARK: - LifeCycle
@@ -29,6 +25,7 @@ final class SigninViewController: BaseViewController, AuthProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         setButtonState()
+        setTextFieldType()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -37,6 +34,11 @@ final class SigninViewController: BaseViewController, AuthProtocol {
     }
     
     // MARK: - Function
+    
+    func setTextFieldType() {
+        nameTextField.setTextFieldMode(type: .plain)
+        passwordTextField.setTextFieldMode(type: .password)
+    }
     
     private func clearTextField(_ textfields: [UITextField]) {
         textfields.forEach {

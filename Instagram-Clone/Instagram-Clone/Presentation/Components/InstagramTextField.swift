@@ -9,6 +9,11 @@ import UIKit
 
 final class InstagramTextField: UITextField {
     
+    enum InstagramTextFieldType {
+        case plain
+        case password
+    }
+    
     private lazy var eyeButton: UIButton = {
         let button = UIButton()
         button.setImage(Const.Image.passwordHiddenEyeIcon, for: .normal)
@@ -39,7 +44,20 @@ final class InstagramTextField: UITextField {
         self.clearButtonMode = .whileEditing
     }
     
-    func setPasswordTextFieldUI() {
+    func setTextFieldMode(type: InstagramTextFieldType) {
+        switch type {
+        case .plain:
+            setPlainTextFieldUI()
+        case .password:
+            setPasswordTextFieldUI()
+        }
+    }
+    
+    private func setPlainTextFieldUI() {
+        self.clearButtonMode = . whileEditing
+    }
+    
+    private func setPasswordTextFieldUI() {
         self.addRightPadding(width: 30)
         self.isSecureTextEntry = true
         self.clearButtonMode = .never

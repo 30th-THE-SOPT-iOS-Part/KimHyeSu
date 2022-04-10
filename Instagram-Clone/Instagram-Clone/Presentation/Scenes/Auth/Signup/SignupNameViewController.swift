@@ -24,6 +24,13 @@ final class SignupNameViewController: BaseViewController, AuthProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         setButtonState()
+        setTextFieldType()
+    }
+    
+    // MARK: - Function
+    
+    func setTextFieldType() {
+        nameTextField.setTextFieldMode(type: .plain)
     }
     
     // MARK: - IBAction

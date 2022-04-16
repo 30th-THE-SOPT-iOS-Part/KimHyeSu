@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Signup Name View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="SignupNameViewController" id="Y6W-OH-hqX" customClass="SignupNameViewController" customModule="Instagram_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WZb-LD-sCF">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cE-YC-gAC">
+                                        <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="44" id="6nW-bX-4aw"/>
+                                            <constraint firstAttribute="height" constant="44" id="YTi-bn-j5G"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system"/>
+                                        <connections>
+                                            <action selector="backButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="54v-fz-7ll"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="2cE-YC-gAC" firstAttribute="top" secondItem="WZb-LD-sCF" secondAttribute="top" id="MxA-iS-fHH"/>
+                                    <constraint firstAttribute="bottom" secondItem="2cE-YC-gAC" secondAttribute="bottom" id="YHK-8t-KyL"/>
+                                    <constraint firstAttribute="height" constant="44" id="gSM-ZN-QLU"/>
+                                    <constraint firstItem="2cE-YC-gAC" firstAttribute="leading" secondItem="WZb-LD-sCF" secondAttribute="leading" id="jGc-8e-qd6"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사용자 이름 만들기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KS4-5z-zmC" customClass="InstagramTitleLabel" customModule="Instagram_Clone" customModuleProvider="target">
+                                <rect key="frame" x="144" y="108" width="126.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="새 계정에 사용할 사용자 이름을 선택하세요. 나중에 언제든지 변경할 수 있습니다." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZfC-0E-G67" customClass="InstagramSubtitleLabel" customModule="Instagram_Clone" customModuleProvider="target">
+                                <rect key="frame" x="40" y="149" width="334" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="사용자 이름" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K99-RT-lVK" customClass="InstagramTextField" customModule="Instagram_Clone" customModuleProvider="target">
+                                <rect key="frame" x="20" y="200" width="374" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="G4q-8k-M8i"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZNw-41-L2D" customClass="InstagramBlueButton" customModule="Instagram_Clone" customModuleProvider="target">
+                                <rect key="frame" x="20" y="265" width="374" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="KNq-zY-hOZ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="다음"/>
+                                <connections>
+                                    <action selector="nextButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="jom-Ar-ON3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZfC-0E-G67" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="62T-a8-o2V"/>
+                            <constraint firstItem="WZb-LD-sCF" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Bo3-LF-KQ1"/>
+                            <constraint firstItem="K99-RT-lVK" firstAttribute="top" secondItem="ZfC-0E-G67" secondAttribute="bottom" constant="30" id="Gma-Ys-uiJ"/>
+                            <constraint firstItem="ZfC-0E-G67" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="JMD-NR-2Su"/>
+                            <constraint firstItem="ZNw-41-L2D" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="LOj-KM-muF"/>
+                            <constraint firstItem="KS4-5z-zmC" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ME8-Hx-uF1"/>
+                            <constraint firstItem="ZNw-41-L2D" firstAttribute="top" secondItem="K99-RT-lVK" secondAttribute="bottom" constant="20" id="S1m-8k-kut"/>
+                            <constraint firstItem="ZfC-0E-G67" firstAttribute="top" secondItem="KS4-5z-zmC" secondAttribute="bottom" constant="20" id="asI-3W-0Tu"/>
+                            <constraint firstItem="WZb-LD-sCF" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="fJY-Oe-Q9E"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="K99-RT-lVK" secondAttribute="trailing" constant="20" id="fky-84-hxc"/>
+                            <constraint firstItem="K99-RT-lVK" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="g7t-bS-NRl"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="WZb-LD-sCF" secondAttribute="trailing" id="h5j-sC-eXI"/>
+                            <constraint firstItem="KS4-5z-zmC" firstAttribute="top" secondItem="WZb-LD-sCF" secondAttribute="bottom" constant="20" id="iQx-RL-HgX"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ZNw-41-L2D" secondAttribute="trailing" constant="20" id="z6g-hX-OCv"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ZfC-0E-G67" secondAttribute="trailing" constant="40" id="zYb-uO-xdI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="K99-RT-lVK" id="vee-PN-0EC"/>
+                        <outlet property="nextButton" destination="ZNw-41-L2D" id="5aV-N5-W77"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-25" y="116"/>
+        </scene>
+        <!--Signup Password View Controller-->
+        <scene sceneID="fBp-yd-SqL">
+            <objects>
+                <viewController storyboardIdentifier="SignupPasswordViewController" id="Fdo-2a-e8b" customClass="SignupPasswordViewController" customModule="Instagram_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wKD-5c-s80">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8oK-pF-rTr">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zzq-em-E0S">
+                                        <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="44" id="AJG-Pk-zTD"/>
+                                            <constraint firstAttribute="height" constant="44" id="dgd-jS-4sQ"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system"/>
+                                        <connections>
+                                            <action selector="backButtonDidTap:" destination="Fdo-2a-e8b" eventType="touchUpInside" id="Lv3-af-aSY"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Zzq-em-E0S" secondAttribute="bottom" id="Rmf-jM-c24"/>
+                                    <constraint firstAttribute="height" constant="44" id="TRf-SE-ehu"/>
+                                    <constraint firstItem="Zzq-em-E0S" firstAttribute="leading" secondItem="8oK-pF-rTr" secondAttribute="leading" id="d3P-2O-3KK"/>
+                                    <constraint firstItem="Zzq-em-E0S" firstAttribute="top" secondItem="8oK-pF-rTr" secondAttribute="top" id="kYQ-hp-AwK"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호 만들기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8G-pU-B15" customClass="InstagramTitleLabel" customModule="Instagram_Clone" customModuleProvider="target">
+                                <rect key="frame" x="153.5" y="108" width="107.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호를 저장할 수 있으므로 icloud에서 로그인 정보를 입력하지 않아도 됩니다." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWZ-if-u7y" customClass="InstagramSubtitleLabel" customModule="Instagram_Clone" customModuleProvider="target">
+                                <rect key="frame" x="40" y="149" width="334" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ztu-Nu-c2j" customClass="InstagramTextField" customModule="Instagram_Clone" customModuleProvider="target">
+                                <rect key="frame" x="20" y="200" width="374" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Deb-iQ-vp0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLR-eF-vIa" customClass="InstagramBlueButton" customModule="Instagram_Clone" customModuleProvider="target">
+                                <rect key="frame" x="20" y="265" width="374" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="tdc-vR-mwm"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="다음"/>
+                                <connections>
+                                    <action selector="nextButtonDidTap:" destination="Fdo-2a-e8b" eventType="touchUpInside" id="1PV-Ld-5q0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dZJ-gZ-Fg9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aWZ-if-u7y" firstAttribute="leading" secondItem="dZJ-gZ-Fg9" secondAttribute="leading" constant="40" id="33o-Ms-288"/>
+                            <constraint firstItem="dZJ-gZ-Fg9" firstAttribute="trailing" secondItem="ztu-Nu-c2j" secondAttribute="trailing" constant="20" id="AIg-jq-sys"/>
+                            <constraint firstItem="Z8G-pU-B15" firstAttribute="top" secondItem="8oK-pF-rTr" secondAttribute="bottom" constant="20" id="ElO-C8-RiD"/>
+                            <constraint firstItem="eLR-eF-vIa" firstAttribute="leading" secondItem="dZJ-gZ-Fg9" secondAttribute="leading" constant="20" id="J2e-7B-rbW"/>
+                            <constraint firstItem="dZJ-gZ-Fg9" firstAttribute="trailing" secondItem="eLR-eF-vIa" secondAttribute="trailing" constant="20" id="KtD-M1-eXn"/>
+                            <constraint firstItem="dZJ-gZ-Fg9" firstAttribute="trailing" secondItem="aWZ-if-u7y" secondAttribute="trailing" constant="40" id="LCx-1Z-pPe"/>
+                            <constraint firstItem="Z8G-pU-B15" firstAttribute="centerX" secondItem="wKD-5c-s80" secondAttribute="centerX" id="Wdm-5t-Tty"/>
+                            <constraint firstItem="8oK-pF-rTr" firstAttribute="leading" secondItem="dZJ-gZ-Fg9" secondAttribute="leading" id="XSM-UP-bXn"/>
+                            <constraint firstItem="eLR-eF-vIa" firstAttribute="top" secondItem="ztu-Nu-c2j" secondAttribute="bottom" constant="20" id="fpo-3v-o9c"/>
+                            <constraint firstItem="8oK-pF-rTr" firstAttribute="trailing" secondItem="dZJ-gZ-Fg9" secondAttribute="trailing" id="hP3-er-uoK"/>
+                            <constraint firstItem="8oK-pF-rTr" firstAttribute="top" secondItem="dZJ-gZ-Fg9" secondAttribute="top" id="iEi-Ue-aXN"/>
+                            <constraint firstItem="aWZ-if-u7y" firstAttribute="top" secondItem="Z8G-pU-B15" secondAttribute="bottom" constant="20" id="jZo-xB-iBP"/>
+                            <constraint firstItem="ztu-Nu-c2j" firstAttribute="leading" secondItem="dZJ-gZ-Fg9" secondAttribute="leading" constant="20" id="mg0-ji-6LD"/>
+                            <constraint firstItem="ztu-Nu-c2j" firstAttribute="top" secondItem="aWZ-if-u7y" secondAttribute="bottom" constant="30" id="oxh-Re-b2a"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nextButton" destination="eLR-eF-vIa" id="dbk-Kw-nTn"/>
+                        <outlet property="passwordTextField" destination="ztu-Nu-c2j" id="SWx-TE-6eu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="li5-mV-Lv4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="720" y="116"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

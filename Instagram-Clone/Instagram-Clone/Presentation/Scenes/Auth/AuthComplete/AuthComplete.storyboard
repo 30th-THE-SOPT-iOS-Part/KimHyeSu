@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Auth Complete View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="AuthCompleteViewController" id="Y6W-OH-hqX" customClass="AuthCompleteViewController" customModule="Instagram_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rg8-5b-w7D" customClass="InstagramTitleLabel" customModule="Instagram_Clone" customModuleProvider="target">
+                                <rect key="frame" x="40" y="377.5" width="334" height="41"/>
+                                <string key="text">OOO님 instagram에
+오신 것을 환영합니다.</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="언제든지 연락처 정보와 사용자 정보를 변경할 수 있습니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjY-iV-Ri7" customClass="InstagramSubtitleLabel" customModule="Instagram_Clone" customModuleProvider="target">
+                                <rect key="frame" x="13" y="433.5" width="388" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Im1-An-6nc" customClass="InstagramBlueButton" customModule="Instagram_Clone" customModuleProvider="target">
+                                <rect key="frame" x="20" y="474.5" width="374" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="PuN-C9-xPD"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="완료하기"/>
+                                <connections>
+                                    <action selector="doneButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="CPS-Lx-gLF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Im1-An-6nc" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="3Ur-oj-ZBF"/>
+                            <constraint firstItem="Im1-An-6nc" firstAttribute="top" secondItem="fjY-iV-Ri7" secondAttribute="bottom" constant="20" id="7tq-5N-Zu4"/>
+                            <constraint firstItem="fjY-iV-Ri7" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="L0j-88-dOv"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="rg8-5b-w7D" secondAttribute="trailing" constant="40" id="Q0E-gM-xaN"/>
+                            <constraint firstItem="rg8-5b-w7D" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="-50" id="aMu-Nq-v7J"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Im1-An-6nc" secondAttribute="trailing" constant="20" id="bai-HU-WOB"/>
+                            <constraint firstItem="fjY-iV-Ri7" firstAttribute="top" secondItem="rg8-5b-w7D" secondAttribute="bottom" constant="15" id="dX4-yk-7ww"/>
+                            <constraint firstItem="rg8-5b-w7D" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="pOU-lA-RED"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="welcomeMessageLabel" destination="rg8-5b-w7D" id="R1S-ik-mRA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="101" y="38"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

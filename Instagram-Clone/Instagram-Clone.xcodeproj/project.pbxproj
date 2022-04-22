@@ -12,6 +12,7 @@
 		1521D07D2811C2D100A9C29B /* Reels.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1521D07C2811C2D100A9C29B /* Reels.storyboard */; };
 		1521D07F2811C2D600A9C29B /* Shop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1521D07E2811C2D600A9C29B /* Shop.storyboard */; };
 		1521D0812811C2DD00A9C29B /* My.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1521D0802811C2DD00A9C29B /* My.storyboard */; };
+		1521D083281280C700A9C29B /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1521D082281280C700A9C29B /* MainTabBarController.swift */; };
 		15858D562800B7BD00332653 /* InstagramSubtitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15858D552800B7BD00332653 /* InstagramSubtitleLabel.swift */; };
 		15858D952802A04200332653 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15858D942802A04200332653 /* UITextField+.swift */; };
 		15858D972802B5CC00332653 /* AuthProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15858D962802B5CC00332653 /* AuthProtocol.swift */; };
@@ -45,6 +46,7 @@
 		1521D07C2811C2D100A9C29B /* Reels.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Reels.storyboard; sourceTree = "<group>"; };
 		1521D07E2811C2D600A9C29B /* Shop.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Shop.storyboard; sourceTree = "<group>"; };
 		1521D0802811C2DD00A9C29B /* My.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = My.storyboard; sourceTree = "<group>"; };
+		1521D082281280C700A9C29B /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		15858D552800B7BD00332653 /* InstagramSubtitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramSubtitleLabel.swift; sourceTree = "<group>"; };
 		15858D942802A04200332653 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 		15858D962802B5CC00332653 /* AuthProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthProtocol.swift; sourceTree = "<group>"; };
@@ -286,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				15963F3B27FF634A003C7A14 /* Main.storyboard */,
+				1521D082281280C700A9C29B /* MainTabBarController.swift */,
 				1521D0732811C25A00A9C29B /* Home */,
 				1521D0742811C26A00A9C29B /* Search */,
 				1521D0752811C27100A9C29B /* Reels */,
@@ -456,6 +459,7 @@
 			files = (
 				15963F632800A0C9003C7A14 /* AuthCompleteViewController.swift in Sources */,
 				15963F6E2800A65D003C7A14 /* InstagramTextField.swift in Sources */,
+				1521D083281280C700A9C29B /* MainTabBarController.swift in Sources */,
 				15963F582800A06F003C7A14 /* SigninViewController.swift in Sources */,
 				15963F7F2800B05A003C7A14 /* ViewController.swift in Sources */,
 				15963F7D2800AFC2003C7A14 /* Storyboard.swift in Sources */,

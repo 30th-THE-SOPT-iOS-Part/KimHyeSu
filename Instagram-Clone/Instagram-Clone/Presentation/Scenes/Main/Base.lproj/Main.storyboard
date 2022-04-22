@@ -6,10 +6,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar Controller-->
         <scene sceneID="Yfr-d3-Rne">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="TIn-QT-0Sr" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBarController" automaticallyAdjustsScrollViewInsets="NO" id="TIn-QT-0Sr" customClass="MainTabBarController" customModule="Instagram_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5aw-Uy-nrT">
                         <autoresizingMask key="autoresizingMask"/>

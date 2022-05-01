@@ -34,6 +34,12 @@ final class AuthCompleteViewController: UIViewController {
     // MARK: - IBAction
 
     @IBAction func doneButtonDidTap(_ sender: Any) {
-        self.dismiss(animated: true)
+        guard let mainTabBarViewController = UIStoryboard(name: Const.Storyboard.Main, bundle: nil)
+                .instantiateViewController(withIdentifier: Const.ViewController.MainTabBarController) as? MainTabBarController else { return }
+        self.view.window?.rootViewController = mainTabBarViewController
+    }
+    
+    @IBAction func loginButtonDidTap(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
 }

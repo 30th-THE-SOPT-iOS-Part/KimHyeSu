@@ -17,5 +17,9 @@ extension Const {
         static let SignupNameViewController = "SignupNameViewController"
         static let SignupPasswordViewController = "SignupPasswordViewController"
         static let AuthCompleteViewController = "AuthCompleteViewController"
+        
+        // MARK: - Main
+        
+        static let MainTabBarController = "MainTabBarController"
     }
 }

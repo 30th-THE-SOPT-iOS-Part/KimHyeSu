@@ -16,5 +16,9 @@ extension Const {
         static let Signin = "Signin"
         static let Signup = "Signup"
         static let AuthComplete = "AuthComplete"
+        
+        // MARK: - Main
+        
+        static let Main = "Main"
     }
 }

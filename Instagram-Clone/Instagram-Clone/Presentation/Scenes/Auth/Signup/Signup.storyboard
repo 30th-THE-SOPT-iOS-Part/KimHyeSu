@@ -41,30 +41,45 @@
                                     <constraint firstItem="2cE-YC-gAC" firstAttribute="leading" secondItem="WZb-LD-sCF" secondAttribute="leading" id="jGc-8e-qd6"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사용자 이름 만들기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KS4-5z-zmC" customClass="InstagramTitleLabel" customModule="Instagram_Clone" customModuleProvider="target">
-                                <rect key="frame" x="144" y="108" width="126.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="새 계정에 사용할 사용자 이름을 선택하세요. 나중에 언제든지 변경할 수 있습니다." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZfC-0E-G67" customClass="InstagramSubtitleLabel" customModule="Instagram_Clone" customModuleProvider="target">
-                                <rect key="frame" x="40" y="149" width="334" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="사용자 이름" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K99-RT-lVK" customClass="InstagramTextField" customModule="Instagram_Clone" customModuleProvider="target">
-                                <rect key="frame" x="20" y="200" width="374" height="45"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="fU9-m6-HQZ">
+                                <rect key="frame" x="16" y="94" width="382" height="131.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사용자 이름 만들기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KS4-5z-zmC" customClass="InstagramTitleLabel" customModule="Instagram_Clone" customModuleProvider="target">
+                                        <rect key="frame" x="128" y="0.0" width="126.5" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="29" id="XY1-66-VUO"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="새 계정에 사용할 사용자 이름을 선택하세요. 나중에 언제든지 변경할 수 있습니다." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZfC-0E-G67" customClass="InstagramSubtitleLabel" customModule="Instagram_Clone" customModuleProvider="target">
+                                        <rect key="frame" x="40" y="48" width="302" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="사용자 이름" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K99-RT-lVK" customClass="InstagramTextField" customModule="Instagram_Clone" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="87.5" width="382" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="G4q-8k-M8i"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="G4q-8k-M8i"/>
+                                    <constraint firstItem="K99-RT-lVK" firstAttribute="leading" secondItem="fU9-m6-HQZ" secondAttribute="leading" id="0Y5-HF-mvz"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZfC-0E-G67" secondAttribute="trailing" constant="40" id="4hF-lY-DRc"/>
+                                    <constraint firstAttribute="bottom" secondItem="K99-RT-lVK" secondAttribute="bottom" id="7gh-DM-Qn7"/>
+                                    <constraint firstItem="ZfC-0E-G67" firstAttribute="leading" secondItem="fU9-m6-HQZ" secondAttribute="leading" constant="40" id="mne-nw-IcZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="K99-RT-lVK" secondAttribute="trailing" id="qby-eH-8On"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZNw-41-L2D" customClass="InstagramBlueButton" customModule="Instagram_Clone" customModuleProvider="target">
-                                <rect key="frame" x="20" y="265" width="374" height="45"/>
+                                <rect key="frame" x="16" y="247.5" width="382" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="KNq-zY-hOZ"/>
+                                    <constraint firstAttribute="height" constant="44" id="KNq-zY-hOZ"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="다음"/>
@@ -76,21 +91,15 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ZfC-0E-G67" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="62T-a8-o2V"/>
+                            <constraint firstItem="ZNw-41-L2D" firstAttribute="top" secondItem="fU9-m6-HQZ" secondAttribute="bottom" constant="22" id="071-MW-5Id"/>
+                            <constraint firstAttribute="trailing" secondItem="fU9-m6-HQZ" secondAttribute="trailing" constant="16" id="4KG-at-8ij"/>
                             <constraint firstItem="WZb-LD-sCF" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Bo3-LF-KQ1"/>
-                            <constraint firstItem="K99-RT-lVK" firstAttribute="top" secondItem="ZfC-0E-G67" secondAttribute="bottom" constant="30" id="Gma-Ys-uiJ"/>
-                            <constraint firstItem="ZfC-0E-G67" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="JMD-NR-2Su"/>
-                            <constraint firstItem="ZNw-41-L2D" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="LOj-KM-muF"/>
-                            <constraint firstItem="KS4-5z-zmC" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ME8-Hx-uF1"/>
-                            <constraint firstItem="ZNw-41-L2D" firstAttribute="top" secondItem="K99-RT-lVK" secondAttribute="bottom" constant="20" id="S1m-8k-kut"/>
-                            <constraint firstItem="ZfC-0E-G67" firstAttribute="top" secondItem="KS4-5z-zmC" secondAttribute="bottom" constant="20" id="asI-3W-0Tu"/>
+                            <constraint firstItem="ZNw-41-L2D" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="LOj-KM-muF"/>
                             <constraint firstItem="WZb-LD-sCF" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="fJY-Oe-Q9E"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="K99-RT-lVK" secondAttribute="trailing" constant="20" id="fky-84-hxc"/>
-                            <constraint firstItem="K99-RT-lVK" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="g7t-bS-NRl"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="WZb-LD-sCF" secondAttribute="trailing" id="h5j-sC-eXI"/>
-                            <constraint firstItem="KS4-5z-zmC" firstAttribute="top" secondItem="WZb-LD-sCF" secondAttribute="bottom" constant="20" id="iQx-RL-HgX"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ZNw-41-L2D" secondAttribute="trailing" constant="20" id="z6g-hX-OCv"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ZfC-0E-G67" secondAttribute="trailing" constant="40" id="zYb-uO-xdI"/>
+                            <constraint firstItem="fU9-m6-HQZ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="v9j-rC-FZo"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ZNw-41-L2D" secondAttribute="trailing" constant="16" id="z6g-hX-OCv"/>
+                            <constraint firstItem="fU9-m6-HQZ" firstAttribute="top" secondItem="WZb-LD-sCF" secondAttribute="bottom" constant="6" id="zkj-0Y-vtq"/>
                         </constraints>
                     </view>
                     <connections>
@@ -135,30 +144,39 @@
                                     <constraint firstItem="Zzq-em-E0S" firstAttribute="top" secondItem="8oK-pF-rTr" secondAttribute="top" id="kYQ-hp-AwK"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호 만들기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8G-pU-B15" customClass="InstagramTitleLabel" customModule="Instagram_Clone" customModuleProvider="target">
-                                <rect key="frame" x="153.5" y="108" width="107.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호를 저장할 수 있으므로 icloud에서 로그인 정보를 입력하지 않아도 됩니다." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWZ-if-u7y" customClass="InstagramSubtitleLabel" customModule="Instagram_Clone" customModuleProvider="target">
-                                <rect key="frame" x="40" y="149" width="334" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ztu-Nu-c2j" customClass="InstagramTextField" customModule="Instagram_Clone" customModuleProvider="target">
-                                <rect key="frame" x="20" y="200" width="374" height="45"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="uZK-Sc-2pk">
+                                <rect key="frame" x="16" y="94" width="382" height="123"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호 만들기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8G-pU-B15" customClass="InstagramTitleLabel" customModule="Instagram_Clone" customModuleProvider="target">
+                                        <rect key="frame" x="137.5" y="0.0" width="107.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호를 저장할 수 있으므로 icloud에서 로그인 정보를 입력하지 않아도 됩니다." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWZ-if-u7y" customClass="InstagramSubtitleLabel" customModule="Instagram_Clone" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="39.5" width="382" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ztu-Nu-c2j" customClass="InstagramTextField" customModule="Instagram_Clone" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="79" width="382" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="Deb-iQ-vp0"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="Deb-iQ-vp0"/>
+                                    <constraint firstAttribute="trailing" secondItem="ztu-Nu-c2j" secondAttribute="trailing" id="GFe-4b-15m"/>
+                                    <constraint firstItem="ztu-Nu-c2j" firstAttribute="leading" secondItem="uZK-Sc-2pk" secondAttribute="leading" id="xIV-ci-1I2"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLR-eF-vIa" customClass="InstagramBlueButton" customModule="Instagram_Clone" customModuleProvider="target">
-                                <rect key="frame" x="20" y="265" width="374" height="45"/>
+                                <rect key="frame" x="16" y="239" width="382" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="tdc-vR-mwm"/>
+                                    <constraint firstAttribute="height" constant="44" id="tdc-vR-mwm"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="다음"/>
@@ -170,20 +188,15 @@
                         <viewLayoutGuide key="safeArea" id="dZJ-gZ-Fg9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="aWZ-if-u7y" firstAttribute="leading" secondItem="dZJ-gZ-Fg9" secondAttribute="leading" constant="40" id="33o-Ms-288"/>
-                            <constraint firstItem="dZJ-gZ-Fg9" firstAttribute="trailing" secondItem="ztu-Nu-c2j" secondAttribute="trailing" constant="20" id="AIg-jq-sys"/>
-                            <constraint firstItem="Z8G-pU-B15" firstAttribute="top" secondItem="8oK-pF-rTr" secondAttribute="bottom" constant="20" id="ElO-C8-RiD"/>
-                            <constraint firstItem="eLR-eF-vIa" firstAttribute="leading" secondItem="dZJ-gZ-Fg9" secondAttribute="leading" constant="20" id="J2e-7B-rbW"/>
-                            <constraint firstItem="dZJ-gZ-Fg9" firstAttribute="trailing" secondItem="eLR-eF-vIa" secondAttribute="trailing" constant="20" id="KtD-M1-eXn"/>
-                            <constraint firstItem="dZJ-gZ-Fg9" firstAttribute="trailing" secondItem="aWZ-if-u7y" secondAttribute="trailing" constant="40" id="LCx-1Z-pPe"/>
-                            <constraint firstItem="Z8G-pU-B15" firstAttribute="centerX" secondItem="wKD-5c-s80" secondAttribute="centerX" id="Wdm-5t-Tty"/>
+                            <constraint firstItem="uZK-Sc-2pk" firstAttribute="top" secondItem="8oK-pF-rTr" secondAttribute="bottom" constant="6" id="5m2-Ju-4bV"/>
+                            <constraint firstItem="uZK-Sc-2pk" firstAttribute="leading" secondItem="dZJ-gZ-Fg9" secondAttribute="leading" constant="16" id="DSI-Vv-ycB"/>
+                            <constraint firstItem="eLR-eF-vIa" firstAttribute="leading" secondItem="dZJ-gZ-Fg9" secondAttribute="leading" constant="16" id="J2e-7B-rbW"/>
+                            <constraint firstItem="dZJ-gZ-Fg9" firstAttribute="trailing" secondItem="eLR-eF-vIa" secondAttribute="trailing" constant="16" id="KtD-M1-eXn"/>
+                            <constraint firstItem="eLR-eF-vIa" firstAttribute="top" secondItem="uZK-Sc-2pk" secondAttribute="bottom" constant="22" id="XD7-SY-Qou"/>
                             <constraint firstItem="8oK-pF-rTr" firstAttribute="leading" secondItem="dZJ-gZ-Fg9" secondAttribute="leading" id="XSM-UP-bXn"/>
-                            <constraint firstItem="eLR-eF-vIa" firstAttribute="top" secondItem="ztu-Nu-c2j" secondAttribute="bottom" constant="20" id="fpo-3v-o9c"/>
+                            <constraint firstAttribute="trailing" secondItem="uZK-Sc-2pk" secondAttribute="trailing" constant="16" id="cXo-w1-vMP"/>
                             <constraint firstItem="8oK-pF-rTr" firstAttribute="trailing" secondItem="dZJ-gZ-Fg9" secondAttribute="trailing" id="hP3-er-uoK"/>
                             <constraint firstItem="8oK-pF-rTr" firstAttribute="top" secondItem="dZJ-gZ-Fg9" secondAttribute="top" id="iEi-Ue-aXN"/>
-                            <constraint firstItem="aWZ-if-u7y" firstAttribute="top" secondItem="Z8G-pU-B15" secondAttribute="bottom" constant="20" id="jZo-xB-iBP"/>
-                            <constraint firstItem="ztu-Nu-c2j" firstAttribute="leading" secondItem="dZJ-gZ-Fg9" secondAttribute="leading" constant="20" id="mg0-ji-6LD"/>
-                            <constraint firstItem="ztu-Nu-c2j" firstAttribute="top" secondItem="aWZ-if-u7y" secondAttribute="bottom" constant="30" id="oxh-Re-b2a"/>
                         </constraints>
                     </view>
                     <connections>

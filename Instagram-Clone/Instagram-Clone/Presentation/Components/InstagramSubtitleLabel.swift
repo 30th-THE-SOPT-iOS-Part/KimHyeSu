@@ -23,7 +23,7 @@ final class InstagramSubtitleLabel: UILabel {
     }
     
     private func setUI() {
-        self.font = .systemFont(ofSize: 14, weight: .semibold)
+        self.font = .systemFont(ofSize: 12, weight: .semibold)
         self.textColor = .systemGray2
         self.numberOfLines = 0
     }

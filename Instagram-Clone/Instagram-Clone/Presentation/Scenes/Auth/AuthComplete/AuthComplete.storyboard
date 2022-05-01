@@ -16,43 +16,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rg8-5b-w7D" customClass="InstagramTitleLabel" customModule="Instagram_Clone" customModuleProvider="target">
-                                <rect key="frame" x="40" y="377.5" width="334" height="41"/>
-                                <string key="text">OOO님 instagram에
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="f4M-A8-nke">
+                                <rect key="frame" x="38" y="349" width="339" height="198.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="dWV-R8-4Gs">
+                                        <rect key="frame" x="0.0" y="0.0" width="339" height="151.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rg8-5b-w7D" customClass="InstagramTitleLabel" customModule="Instagram_Clone" customModuleProvider="target">
+                                                <rect key="frame" x="96" y="0.0" width="147.5" height="41"/>
+                                                <string key="text">OOO님 instagram에
 오신 것을 환영합니다.</string>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="언제든지 연락처 정보와 사용자 정보를 변경할 수 있습니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjY-iV-Ri7" customClass="InstagramSubtitleLabel" customModule="Instagram_Clone" customModuleProvider="target">
-                                <rect key="frame" x="13" y="433.5" width="388" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Im1-An-6nc" customClass="InstagramBlueButton" customModule="Instagram_Clone" customModuleProvider="target">
-                                <rect key="frame" x="20" y="474.5" width="374" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="PuN-C9-xPD"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="완료하기"/>
-                                <connections>
-                                    <action selector="doneButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="CPS-Lx-gLF"/>
-                                </connections>
-                            </button>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="언제든지 연락처 정보와 사용자 정보를 변경할 수 있습니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjY-iV-Ri7" customClass="InstagramSubtitleLabel" customModule="Instagram_Clone" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="64" width="339" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Im1-An-6nc" customClass="InstagramBlueButton" customModule="Instagram_Clone" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="107.5" width="339" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="PuN-C9-xPD"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="완료하기"/>
+                                                <connections>
+                                                    <action selector="doneButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="CPS-Lx-gLF"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Im1-An-6nc" firstAttribute="leading" secondItem="dWV-R8-4Gs" secondAttribute="leading" id="36N-5N-rAg"/>
+                                            <constraint firstAttribute="trailing" secondItem="Im1-An-6nc" secondAttribute="trailing" id="AqX-tM-okm"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4r-DV-qAZ">
+                                        <rect key="frame" x="99" y="169.5" width="141" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="다른 계정으로 로그인하기"/>
+                                        <connections>
+                                            <action selector="loginButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="l3Q-Rf-dJu"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Im1-An-6nc" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="3Ur-oj-ZBF"/>
-                            <constraint firstItem="Im1-An-6nc" firstAttribute="top" secondItem="fjY-iV-Ri7" secondAttribute="bottom" constant="20" id="7tq-5N-Zu4"/>
-                            <constraint firstItem="fjY-iV-Ri7" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="L0j-88-dOv"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="rg8-5b-w7D" secondAttribute="trailing" constant="40" id="Q0E-gM-xaN"/>
-                            <constraint firstItem="rg8-5b-w7D" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="-50" id="aMu-Nq-v7J"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Im1-An-6nc" secondAttribute="trailing" constant="20" id="bai-HU-WOB"/>
-                            <constraint firstItem="fjY-iV-Ri7" firstAttribute="top" secondItem="rg8-5b-w7D" secondAttribute="bottom" constant="15" id="dX4-yk-7ww"/>
-                            <constraint firstItem="rg8-5b-w7D" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="pOU-lA-RED"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="f4M-A8-nke" secondAttribute="trailing" constant="37" id="E0I-Iy-hwt"/>
+                            <constraint firstItem="f4M-A8-nke" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="38" id="P4J-5U-asL"/>
+                            <constraint firstItem="f4M-A8-nke" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="dFA-hZ-3IJ"/>
                         </constraints>
                     </view>
                     <connections>

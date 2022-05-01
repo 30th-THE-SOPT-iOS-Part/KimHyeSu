@@ -18,3 +18,4 @@
 |`Week03`|[UIScrollView - frameLayoutGuide, contentLayouGuide](https://kimseawater.notion.site/UIScrollView-frameLayoutGuide-contentLayouGuide-ae6378e7f5e544459725fc639e0b7851)|-|
 ||[Nib, Xib](https://kimseawater.notion.site/Nib-Xib-b072d26d09154a7f83cf83fcfa797900)|-|
 ||[Property - 저장프로퍼티, 연산프로퍼티, 타입프로퍼티](https://kimseawater.notion.site/Property-10732d0fc2c5476a9765bb8a88fbb7db)|-|
+||[UICollectionView 공식문서 읽기](https://kimseawater.notion.site/UICollectionView-3e841fde37954c0ba1eed07b4f36ae78)|`공식문서`|

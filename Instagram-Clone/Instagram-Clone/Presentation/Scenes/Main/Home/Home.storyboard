@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,9 +17,45 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rw8-a4-VdE">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Instagram Black Logo" translatesAutoresizingMaskIntoConstraints="NO" id="ZAH-WJ-5RJ">
+                                        <rect key="frame" x="14" y="8.5" width="96" height="27"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="96" id="JgM-Bq-WgK"/>
+                                            <constraint firstAttribute="height" constant="27" id="teB-77-Fky"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="sKB-Kb-j5D">
+                                        <rect key="frame" x="296" y="10" width="104" height="24"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="THS-4O-9gI">
+                                                <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="icn_add"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CEC-st-ADB">
+                                                <rect key="frame" x="40" y="0.0" width="24" height="24"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="icn_unlike"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhc-PE-RPW">
+                                                <rect key="frame" x="80" y="0.0" width="24" height="24"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="icn_share"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="Oh0-So-xkH"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="sKB-Kb-j5D" secondAttribute="trailing" constant="14" id="5Rd-PP-EWH"/>
+                                    <constraint firstItem="ZAH-WJ-5RJ" firstAttribute="centerY" secondItem="Rw8-a4-VdE" secondAttribute="centerY" id="Cf1-fL-unj"/>
+                                    <constraint firstItem="ZAH-WJ-5RJ" firstAttribute="leading" secondItem="Rw8-a4-VdE" secondAttribute="leading" constant="14" id="g24-Hg-AP8"/>
                                     <constraint firstAttribute="height" constant="44" id="lqD-Cp-VkY"/>
+                                    <constraint firstItem="sKB-Kb-j5D" firstAttribute="centerY" secondItem="Rw8-a4-VdE" secondAttribute="centerY" id="sJS-8v-1dk"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -41,10 +76,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Instagram Black Logo" width="175" height="50"/>
+        <image name="icn_add" width="24" height="24"/>
         <image name="icn_home" width="24" height="24"/>
         <image name="icn_home_selected" width="24" height="26"/>
-        <systemColor name="systemTealColor">
-            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <image name="icn_share" width="24" height="24"/>
+        <image name="icn_unlike" width="24" height="24"/>
     </resources>
 </document>

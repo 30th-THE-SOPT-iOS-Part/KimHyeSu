@@ -25,6 +25,7 @@ final class HomeViewController: UIViewController {
     
     private func registerXib() {
         collectionView.register(UINib(nibName: StoryCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: StoryCollectionViewCell.identifier)
+        collectionView.register(UINib(nibName: FeedCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: FeedCollectionViewCell.identifier)
     }
     
     private func setCollectionView() {

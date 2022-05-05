@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -58,17 +59,35 @@
                                     <constraint firstItem="sKB-Kb-j5D" firstAttribute="centerY" secondItem="Rw8-a4-VdE" secondAttribute="centerY" id="sJS-8v-1dk"/>
                                 </constraints>
                             </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8FR-oG-pvK">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="avp-LQ-3a6">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="8FR-oG-pvK" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="D3U-44-OXP"/>
                             <constraint firstItem="Rw8-a4-VdE" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="GJw-Xa-JNT"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="8FR-oG-pvK" secondAttribute="trailing" id="NdZ-Wi-Ecl"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="8FR-oG-pvK" secondAttribute="bottom" id="gWG-gI-yAq"/>
+                            <constraint firstItem="8FR-oG-pvK" firstAttribute="top" secondItem="Rw8-a4-VdE" secondAttribute="bottom" id="h73-Ni-6Sq"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Rw8-a4-VdE" secondAttribute="trailing" id="r6V-M8-o7Z"/>
                             <constraint firstItem="Rw8-a4-VdE" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="r7L-wx-emh"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="icn_home" selectedImage="icn_home_selected" id="v6L-0M-VQ7"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="collectionView" destination="8FR-oG-pvK" id="riS-tf-CB1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -82,5 +101,8 @@
         <image name="icn_home_selected" width="24" height="26"/>
         <image name="icn_share" width="24" height="24"/>
         <image name="icn_unlike" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

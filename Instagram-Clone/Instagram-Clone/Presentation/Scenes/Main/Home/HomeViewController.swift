@@ -9,11 +9,26 @@ import UIKit
 
 final class HomeViewController: UIViewController {
     
+    // MARK: - IBOutlet
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     // MARK: - LifeCycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        registerXib()
+        setCollectionView()
     }
     
+    // MARK: - Function
     
+    private func registerXib() {
+        collectionView.register(UINib(nibName: StoryCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: StoryCollectionViewCell.identifier)
+    }
+    
+    private func setCollectionView() {
+        collectionView.dataSource = self
+        collectionView.setCollectionViewLayout(createLayout(), animated: true)
+    }
 }

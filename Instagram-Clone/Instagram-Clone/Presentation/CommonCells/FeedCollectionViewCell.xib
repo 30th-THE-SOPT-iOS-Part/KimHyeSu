@@ -60,6 +60,9 @@
                                         <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="icn_unlike"/>
+                                        <connections>
+                                            <action selector="likeButtonDidTap:" destination="gTV-IL-0wX" eventType="touchUpInside" id="l2c-eg-ILF"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZd-rg-ONl">
                                         <rect key="frame" x="34" y="0.0" width="24" height="24"/>
@@ -161,6 +164,7 @@
                 <outlet property="feedContentsLabel" destination="yzL-8b-95o" id="440-Tr-3TB"/>
                 <outlet property="feedImageView" destination="Aue-Je-spZ" id="5qX-4w-riQ"/>
                 <outlet property="feedUserIdButton" destination="JUT-lo-m8P" id="1av-0Z-P5E"/>
+                <outlet property="likeButton" destination="wzb-mv-dTB" id="l11-Ck-73j"/>
                 <outlet property="likeCountLabel" destination="K9W-fO-ygb" id="pyv-Ll-LvS"/>
                 <outlet property="profileImageView" destination="beB-iU-5ig" id="xsF-TM-Se6"/>
                 <outlet property="userIdLabel" destination="lpr-dM-Z0N" id="nO9-Ol-aGo"/>

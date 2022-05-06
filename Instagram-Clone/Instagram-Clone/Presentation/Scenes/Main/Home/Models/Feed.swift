@@ -17,7 +17,7 @@ struct Feed {
 
 extension Feed {
     static let dummy = [Feed(user: User(userId: "kimsea", userImage: Const.Image.avatar1),
-                             feedImage: Const.Image.postImage1, contents: "놀러가고싶다", likeCount: 330, commentCount: 100),
+                             feedImage: Const.Image.postImage1, contents: "안녕하세요\n이 글은 여러줄이에요\n길이가늘어날까요?\nㅋㅋㅋ", likeCount: 330, commentCount: 100),
                         Feed(user: User(userId: "apple", userImage: Const.Image.avatar1),
                              feedImage: Const.Image.postImage2, contents: "맛있는 사과", likeCount: 50, commentCount: 4),
                         Feed(user: User(userId: "food_trash", userImage: Const.Image.avatar1),

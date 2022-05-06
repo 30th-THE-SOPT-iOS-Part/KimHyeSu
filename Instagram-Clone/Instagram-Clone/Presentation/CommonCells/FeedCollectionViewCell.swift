@@ -37,7 +37,11 @@ final class FeedCollectionViewCell: UICollectionViewCell {
         feedImageView.image = feed.feedImage
         likeCount = feed.likeCount
         feedUserIdButton.setTitle(feed.user.userId, for: .normal)
-        feedContentsLabel.text = feed.contents
+        feedUserIdButton.sizeToFit()
+        feedContentsLabel.text = feed.user.userId + " " + feed.contents
+        let attributedStr = NSMutableAttributedString(string: feedContentsLabel.text!)
+        attributedStr.addAttribute(.foregroundColor, value: UIColor.clear, range: (feedContentsLabel.text! as NSString).range(of: feed.user.userId))
+        feedContentsLabel.attributedText = attributedStr
         commentCountButton.setTitle("댓글 \(feed.commentCount)개 모두보기", for: .normal)
     }
     

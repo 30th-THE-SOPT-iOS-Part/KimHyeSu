@@ -9,7 +9,7 @@ import Foundation
 
 struct GeneralService {
     
-    static func judgeStatus<T: Codable>(by statusCode: Int, _ data: Data, _ : T.Type) -> NetworkResult<Any> {
+    static func judgeStatus<T: Codable>(by statusCode: Int, _ data: Data, _ type: T.Type) -> NetworkResult<Any> {
         let decoder = JSONDecoder()
         guard let decodedData = try? decoder.decode(GeneralResponse<T>.self, from: data)
         else { return .pathErr }

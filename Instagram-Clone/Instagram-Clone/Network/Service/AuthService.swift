@@ -22,7 +22,9 @@ struct AuthService {
                 case.success(let data):
                     let statusCode = res.response?.statusCode
                     let data = data
-                    let networkResult = GeneralService.judgeStatus(by: statusCode ?? 0, data, SigninResponse.self)
+                    let networkResult = GeneralService.judgeStatus(by: statusCode ?? 0,
+                                                                   data,
+                                                                   SigninResponse.self)
                     completion(networkResult)
                 case .failure(let err):
                     print(err)
@@ -39,7 +41,9 @@ struct AuthService {
                 case.success(let data):
                     let statusCode = res.response?.statusCode
                     let data = data
-                    let networkResult = GeneralService.judgeStatus(by: statusCode ?? 0, data, SignupResponse.self)
+                    let networkResult = GeneralService.judgeStatus(by: statusCode ?? 0,
+                                                                   data,
+                                                                   SignupResponse.self)
                     completion(networkResult)
                 case .failure(let err):
                     print(err)

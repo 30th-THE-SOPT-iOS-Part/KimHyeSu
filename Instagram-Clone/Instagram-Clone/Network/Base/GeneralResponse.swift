@@ -13,13 +13,6 @@ struct GeneralResponse<T: Codable>: Codable {
     var message: String?
     var data: T?
     
-    enum CodingKeys: String, CodingKey {
-        case message
-        case success
-        case data
-        case status
-    }
-    
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         message = (try? values.decode(String.self, forKey: .message)) ?? ""

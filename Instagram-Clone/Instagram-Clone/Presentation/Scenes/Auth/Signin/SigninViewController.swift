@@ -7,6 +7,8 @@
 
 import UIKit
 
+import Alamofire
+
 final class SigninViewController: BaseViewController, AuthProtocol {
     
     // MARK: - Property
